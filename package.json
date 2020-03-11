@@ -2,4 +2,7 @@
   "name": "closet_app",
   "private": true,
   "dependencies": {}
+  "scirpts":{
+  "start":"node server.js"
+  }
 }
