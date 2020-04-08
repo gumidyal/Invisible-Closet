@@ -1,0 +1,23 @@
+<% provide(:title,'Make a Donation') %>
+<h1>Make a Donation</h1>
+<p>Put Donation logistics information here (where to drop off, who to contact)</p>
+<p>This is where we'd put the form, I don't know how to make a blank form
+  that goes nowhere.</p>
+
+<p>What item are you donating?</p>
+<input name="donation[name]" type="text" value=""/>
+<div class="btn-group dropright">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Options
+  </button>
+  <div class="dropdown-menu">
+  <!-- <span class="dropdown-item-text">Closet Items</span> -->
+  <a class="dropdown-item" href="#">Pencils</a>
+  <a class="dropdown-item" href="#">T-Shirts</a>
+  <a class="dropdown-item" href="#">Water Bottles</a>
+  </div>
+</div>
+
+<h4>Contact Info:</h4>
+<p>Optionally, leave some contact info so we can thank our donors!</p>
+<button class="btn btn-success">Submit Donation</button>
