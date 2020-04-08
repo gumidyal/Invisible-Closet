@@ -1,0 +1,9 @@
+@import '_bootswatch';
+@import 'bootstrap';
+@import '_variables.scss';
+html {
+    overflow-y: scroll;
+}
+h1,h2,h3,h4,h5,h6 {
+    line-height: 1;
+}
