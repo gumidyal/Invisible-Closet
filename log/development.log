@@ -6027,3 +6027,1148 @@ Processing by Admin::NeedsController#index as HTML
 Completed 200 OK in 217ms (Views: 210.9ms | ActiveRecord: 2.1ms)
 
 
+Started GET "/admin/needs" for 127.0.0.1 at 2020-04-14 12:29:27 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::NeedsController#index as HTML
+  [1m[36mAdminUser Load (1.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "needs" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (771.3ms)
+Completed 200 OK in 821ms (Views: 785.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2020-04-14 12:29:33 -0500
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (210.2ms)
+Completed 200 OK in 218ms (Views: 209.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/admin/items" for 127.0.0.1 at 2020-04-14 12:29:34 -0500
+Processing by Admin::ItemsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (183.6ms)
+Completed 200 OK in 188ms (Views: 184.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 12:29:52 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 14ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-22 11:36:33 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 19ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for ::1 at 2020-04-22 11:36:38 -0500
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for ::1 at 2020-04-22 11:36:38 -0500
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/shared/_links.erb (1.6ms)
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (74.8ms)
+Completed 200 OK in 1140ms (Views: 1127.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/admin/login" for ::1 at 2020-04-22 11:36:41 -0500
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aBKMmAi0LARz4BBKcPkKtsu+tlrU/LLghfnZaIf7SmrjAHUYPdO6Z9usIBKUs38bPoA2PkXeWecpOMBa0QX64A==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (1.6ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 193ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/admin" for ::1 at 2020-04-22 11:36:41 -0500
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb (115.4ms)
+Completed 200 OK in 125ms (Views: 118.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/categories" for ::1 at 2020-04-22 11:36:44 -0500
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (206.1ms)
+Completed 200 OK in 223ms (Views: 205.7ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/admin/comments" for ::1 at 2020-04-22 11:36:45 -0500
+Processing by Admin::CommentsController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ?[0m  [["namespace", "admin"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["namespace", "admin"], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."resource_type" FROM "active_admin_comments" ORDER BY resource_type asc[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."author_type" FROM "active_admin_comments" ORDER BY author_type asc[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (201.1ms)
+Completed 200 OK in 210ms (Views: 199.8ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/admin/donations" for ::1 at 2020-04-22 11:36:47 -0500
+Processing by Admin::DonationsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "donations" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (177.1ms)
+Completed 200 OK in 185ms (Views: 178.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/items" for ::1 at 2020-04-22 11:36:48 -0500
+Processing by Admin::ItemsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (140.8ms)
+Completed 200 OK in 146ms (Views: 142.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/needs" for ::1 at 2020-04-22 11:36:50 -0500
+Processing by Admin::NeedsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "needs" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (117.8ms)
+Completed 200 OK in 126ms (Views: 120.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-23 22:01:48 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 19ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for ::1 at 2020-04-23 22:03:59 -0500
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for ::1 at 2020-04-23 22:03:59 -0500
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/shared/_links.erb (1.2ms)
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (65.4ms)
+Completed 200 OK in 1339ms (Views: 1323.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/admin/login" for ::1 at 2020-04-23 22:04:04 -0500
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N0eYTnDYg/sYQG1CxFuwXCgRwaV8INHp16/9wvLQw/yD1MASSvzYyTvAv8RDheFBiJmpEtCtsU5Xhmyw2ZNhVQ==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (2.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 220ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/admin" for ::1 at 2020-04-23 22:04:04 -0500
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb (98.3ms)
+Completed 200 OK in 109ms (Views: 101.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/admin_users" for ::1 at 2020-04-23 22:04:10 -0500
+Processing by Admin::AdminUsersController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" ORDER BY "admin_users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (201.5ms)
+Completed 200 OK in 216ms (Views: 203.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/categories" for ::1 at 2020-04-23 22:04:11 -0500
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (151.9ms)
+Completed 200 OK in 161ms (Views: 151.0ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/admin/items" for ::1 at 2020-04-23 22:04:12 -0500
+Processing by Admin::ItemsController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (202.1ms)
+Completed 200 OK in 216ms (Views: 206.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/items/new" for ::1 at 2020-04-23 22:04:32 -0500
+Processing by Admin::ItemsController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/new.html.arb
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/new.html.arb (118.2ms)
+Completed 200 OK in 126ms (Views: 123.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-23 23:21:33 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (0.1ms)
+Completed 200 OK in 14ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for ::1 at 2020-04-23 23:21:37 -0500
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for ::1 at 2020-04-23 23:21:37 -0500
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/shared/_links.erb (1.4ms)
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (59.3ms)
+Completed 200 OK in 1454ms (Views: 1438.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2020-04-23 23:21:41 -0500
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esVLt9iuVsNfP12bGAK8xO4K5fq8fUxRnGarCFMbJgn57+1Z6XyPb6YNnWFNWcuU1yND2MAhtuFMHVQizzcMeQ==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.8ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 223ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/admin" for ::1 at 2020-04-23 23:21:41 -0500
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb (179.9ms)
+Completed 200 OK in 189ms (Views: 182.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/categories" for ::1 at 2020-04-23 23:21:44 -0500
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (251.3ms)
+Completed 200 OK in 269ms (Views: 251.0ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/admin/comments" for ::1 at 2020-04-23 23:21:47 -0500
+Processing by Admin::CommentsController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ?[0m  [["namespace", "admin"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["namespace", "admin"], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."resource_type" FROM "active_admin_comments" ORDER BY resource_type asc[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."author_type" FROM "active_admin_comments" ORDER BY author_type asc[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (197.9ms)
+Completed 200 OK in 209ms (Views: 199.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/admin/donations" for ::1 at 2020-04-23 23:21:48 -0500
+Processing by Admin::DonationsController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "donations" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (334.7ms)
+Completed 200 OK in 349ms (Views: 339.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/" for ::1 at 2020-04-23 23:36:11 -0500
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb (248.5ms)
+Completed 200 OK in 255ms (Views: 251.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/logout" for ::1 at 2020-04-23 23:36:16 -0500
+Processing by ActiveAdmin::Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wG3CAe7KfT8WBX85nLpG1KVuAeXQFvhQ4yWVh5EUPvJ6L8lRAk6BA2JQim+6P+5iN04l/owy+LjxLDkIucTMmg=="}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 14ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/admin" for ::1 at 2020-04-23 23:36:16 -0500
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for ::1 at 2020-04-23 23:36:16 -0500
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/shared/_links.erb (1.2ms)
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (26.7ms)
+Completed 200 OK in 253ms (Views: 251.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2020-04-23 23:36:28 -0500
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FVowVEJUOi5+5Dm6Yb2GkQjsZm1+qbYYdjPxIHtIeexH/cn4lfo00WfZ5jqsHTnoGgybVuB/7BTYKPo+C90cPA==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.9ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 165ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/admin" for ::1 at 2020-04-23 23:36:28 -0500
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb (216.2ms)
+Completed 200 OK in 222ms (Views: 219.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/logout" for ::1 at 2020-04-23 23:36:46 -0500
+Processing by ActiveAdmin::Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WqklSxJ0SBod6QN0tehDUTnE7GbyrGfXieXhL4DgzfvRhmPGaDjfFlYvGojwil/s/dxrwLHhH5LK4Mj9tyQMCg=="}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/admin" for ::1 at 2020-04-23 23:36:46 -0500
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for ::1 at 2020-04-23 23:36:46 -0500
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/shared/_links.erb (1.5ms)
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (28.1ms)
+Completed 200 OK in 166ms (Views: 164.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2020-04-23 23:40:43 -0500
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5ztZbYK0SLqFzZFbDSZ3nnF0wJp/H2X9aOGty0BOy4GY1StG2EURlKa774YFhny3w2dK4q1T+03ZgvbbgZeerQ==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 149ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for ::1 at 2020-04-23 23:40:43 -0500
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb (108.6ms)
+Completed 200 OK in 113ms (Views: 110.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/needs" for ::1 at 2020-04-23 23:41:21 -0500
+Processing by Admin::NeedsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "needs" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (186.2ms)
+Completed 200 OK in 193ms (Views: 187.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/items" for ::1 at 2020-04-23 23:41:23 -0500
+Processing by Admin::ItemsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (203.2ms)
+Completed 200 OK in 210ms (Views: 205.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/donations" for ::1 at 2020-04-23 23:41:24 -0500
+Processing by Admin::DonationsController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "donations" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (158.2ms)
+Completed 200 OK in 166ms (Views: 161.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/comments" for ::1 at 2020-04-23 23:41:26 -0500
+Processing by Admin::CommentsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ?[0m  [["namespace", "admin"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["namespace", "admin"], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."resource_type" FROM "active_admin_comments" ORDER BY resource_type asc[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."author_type" FROM "active_admin_comments" ORDER BY author_type asc[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (172.6ms)
+Completed 200 OK in 177ms (Views: 173.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/donations" for ::1 at 2020-04-23 23:41:28 -0500
+Processing by Admin::DonationsController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "donations" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (128.9ms)
+Completed 200 OK in 134ms (Views: 131.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/comments" for ::1 at 2020-04-23 23:41:29 -0500
+Processing by Admin::CommentsController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ?[0m  [["namespace", "admin"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["namespace", "admin"], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."resource_type" FROM "active_admin_comments" ORDER BY resource_type asc[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."author_type" FROM "active_admin_comments" ORDER BY author_type asc[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (150.0ms)
+Completed 200 OK in 157ms (Views: 151.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/categories" for ::1 at 2020-04-23 23:41:31 -0500
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (152.0ms)
+Completed 200 OK in 157ms (Views: 152.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/donations" for ::1 at 2020-04-23 23:42:06 -0500
+Processing by Admin::DonationsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "donations" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (141.4ms)
+Completed 200 OK in 147ms (Views: 143.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/donations/new" for ::1 at 2020-04-23 23:42:08 -0500
+Processing by Admin::DonationsController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/new.html.arb
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/new.html.arb (131.4ms)
+Completed 200 OK in 144ms (Views: 136.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/admin/donations" for ::1 at 2020-04-23 23:43:08 -0500
+Processing by Admin::DonationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kIg+lnV7MBjBkVzTG33/K0E0cXxKpvn5Th9saYDISRlnfnroUTtv6/sunWtGZSlDgyppFcQYNKFly7EyoQWX4A==", "donation"=>{"name"=>"ananymous", "email"=>"donation@example.com", "description"=>"5 boxes of granola bars\r\nmedium boys sweatshirt\r\n2 boxes of pencils"}, "commit"=>"Create Donation"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `items' for #<Donation:0x00007f8e31681a20>):
+  
+activemodel (5.1.7) lib/active_model/attribute_methods.rb:432:in `method_missing'
+activemodel (5.1.7) lib/active_model/validator.rb:148:in `block in validate'
+activemodel (5.1.7) lib/active_model/validator.rb:147:in `each'
+activemodel (5.1.7) lib/active_model/validator.rb:147:in `validate'
+activesupport (5.1.7) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.7) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+activesupport (5.1.7) lib/active_support/callbacks.rb:601:in `block (2 levels) in default_terminator'
+activesupport (5.1.7) lib/active_support/callbacks.rb:600:in `catch'
+activesupport (5.1.7) lib/active_support/callbacks.rb:600:in `block in default_terminator'
+activesupport (5.1.7) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.7) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.7) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.7) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.7) lib/active_support/callbacks.rb:130:in `run_callbacks'
+activesupport (5.1.7) lib/active_support/callbacks.rb:827:in `_run_validate_callbacks'
+activemodel (5.1.7) lib/active_model/validations.rb:405:in `run_validations!'
+activemodel (5.1.7) lib/active_model/validations/callbacks.rb:114:in `block in run_validations!'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+activesupport (5.1.7) lib/active_support/callbacks.rb:827:in `_run_validation_callbacks'
+activemodel (5.1.7) lib/active_model/validations/callbacks.rb:114:in `run_validations!'
+activemodel (5.1.7) lib/active_model/validations.rb:335:in `valid?'
+activerecord (5.1.7) lib/active_record/validations.rb:65:in `valid?'
+activerecord (5.1.7) lib/active_record/validations.rb:82:in `perform_validations'
+activerecord (5.1.7) lib/active_record/validations.rb:44:in `save'
+activerecord (5.1.7) lib/active_record/attribute_methods/dirty.rb:35:in `save'
+activerecord (5.1.7) lib/active_record/transactions.rb:308:in `block (2 levels) in save'
+activerecord (5.1.7) lib/active_record/transactions.rb:384:in `block in with_transaction_returning_status'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `block in transaction'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/transaction.rb:194:in `block in within_new_transaction'
+/Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/2.6.0/monitor.rb:235:in `mon_synchronize'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/transaction.rb:191:in `within_new_transaction'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `transaction'
+activerecord (5.1.7) lib/active_record/transactions.rb:210:in `transaction'
+activerecord (5.1.7) lib/active_record/transactions.rb:381:in `with_transaction_returning_status'
+activerecord (5.1.7) lib/active_record/transactions.rb:308:in `block in save'
+activerecord (5.1.7) lib/active_record/transactions.rb:323:in `rollback_active_record_state!'
+activerecord (5.1.7) lib/active_record/transactions.rb:307:in `save'
+activerecord (5.1.7) lib/active_record/suppressor.rb:42:in `save'
+activeadmin (2.4.0) lib/active_admin/resource_controller/data_access.rb:155:in `block in save_resource'
+activesupport (5.1.7) lib/active_support/core_ext/object/try.rb:17:in `public_send'
+activesupport (5.1.7) lib/active_support/core_ext/object/try.rb:17:in `try!'
+activesupport (5.1.7) lib/active_support/core_ext/object/try.rb:6:in `try'
+activeadmin (2.4.0) lib/active_admin/callbacks.rb:79:in `block (2 levels) in define_active_admin_callbacks'
+activeadmin (2.4.0) lib/active_admin/resource_controller/data_access.rb:154:in `save_resource'
+activeadmin (2.4.0) lib/active_admin/resource_controller/data_access.rb:144:in `block in create_resource'
+activesupport (5.1.7) lib/active_support/core_ext/object/try.rb:17:in `public_send'
+activesupport (5.1.7) lib/active_support/core_ext/object/try.rb:17:in `try!'
+activesupport (5.1.7) lib/active_support/core_ext/object/try.rb:6:in `try'
+activeadmin (2.4.0) lib/active_admin/callbacks.rb:79:in `block (2 levels) in define_active_admin_callbacks'
+activeadmin (2.4.0) lib/active_admin/resource_controller/data_access.rb:143:in `create_resource'
+inherited_resources (1.11.0) lib/inherited_resources/actions.rb:33:in `create'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.7) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+request_store (1.5.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/admin/donations" for ::1 at 2020-04-23 23:43:20 -0500
+Processing by Admin::DonationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kIg+lnV7MBjBkVzTG33/K0E0cXxKpvn5Th9saYDISRlnfnroUTtv6/sunWtGZSlDgyppFcQYNKFly7EyoQWX4A==", "donation"=>{"name"=>"ananymous", "email"=>"donation@example.com", "description"=>"5 boxes of granola bars\r\nmedium boys sweatshirt\r\n2 boxes of pencils"}, "commit"=>"Create Donation"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `items' for #<Donation:0x00007f8e2f73ac20>):
+  
+activemodel (5.1.7) lib/active_model/attribute_methods.rb:432:in `method_missing'
+activemodel (5.1.7) lib/active_model/validator.rb:148:in `block in validate'
+activemodel (5.1.7) lib/active_model/validator.rb:147:in `each'
+activemodel (5.1.7) lib/active_model/validator.rb:147:in `validate'
+activesupport (5.1.7) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.7) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+activesupport (5.1.7) lib/active_support/callbacks.rb:601:in `block (2 levels) in default_terminator'
+activesupport (5.1.7) lib/active_support/callbacks.rb:600:in `catch'
+activesupport (5.1.7) lib/active_support/callbacks.rb:600:in `block in default_terminator'
+activesupport (5.1.7) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.7) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.7) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.7) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.7) lib/active_support/callbacks.rb:130:in `run_callbacks'
+activesupport (5.1.7) lib/active_support/callbacks.rb:827:in `_run_validate_callbacks'
+activemodel (5.1.7) lib/active_model/validations.rb:405:in `run_validations!'
+activemodel (5.1.7) lib/active_model/validations/callbacks.rb:114:in `block in run_validations!'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+activesupport (5.1.7) lib/active_support/callbacks.rb:827:in `_run_validation_callbacks'
+activemodel (5.1.7) lib/active_model/validations/callbacks.rb:114:in `run_validations!'
+activemodel (5.1.7) lib/active_model/validations.rb:335:in `valid?'
+activerecord (5.1.7) lib/active_record/validations.rb:65:in `valid?'
+activerecord (5.1.7) lib/active_record/validations.rb:82:in `perform_validations'
+activerecord (5.1.7) lib/active_record/validations.rb:44:in `save'
+activerecord (5.1.7) lib/active_record/attribute_methods/dirty.rb:35:in `save'
+activerecord (5.1.7) lib/active_record/transactions.rb:308:in `block (2 levels) in save'
+activerecord (5.1.7) lib/active_record/transactions.rb:384:in `block in with_transaction_returning_status'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `block in transaction'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/transaction.rb:194:in `block in within_new_transaction'
+/Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/2.6.0/monitor.rb:235:in `mon_synchronize'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/transaction.rb:191:in `within_new_transaction'
+activerecord (5.1.7) lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `transaction'
+activerecord (5.1.7) lib/active_record/transactions.rb:210:in `transaction'
+activerecord (5.1.7) lib/active_record/transactions.rb:381:in `with_transaction_returning_status'
+activerecord (5.1.7) lib/active_record/transactions.rb:308:in `block in save'
+activerecord (5.1.7) lib/active_record/transactions.rb:323:in `rollback_active_record_state!'
+activerecord (5.1.7) lib/active_record/transactions.rb:307:in `save'
+activerecord (5.1.7) lib/active_record/suppressor.rb:42:in `save'
+activeadmin (2.4.0) lib/active_admin/resource_controller/data_access.rb:155:in `block in save_resource'
+activesupport (5.1.7) lib/active_support/core_ext/object/try.rb:17:in `public_send'
+activesupport (5.1.7) lib/active_support/core_ext/object/try.rb:17:in `try!'
+activesupport (5.1.7) lib/active_support/core_ext/object/try.rb:6:in `try'
+activeadmin (2.4.0) lib/active_admin/callbacks.rb:79:in `block (2 levels) in define_active_admin_callbacks'
+activeadmin (2.4.0) lib/active_admin/resource_controller/data_access.rb:154:in `save_resource'
+activeadmin (2.4.0) lib/active_admin/resource_controller/data_access.rb:144:in `block in create_resource'
+activesupport (5.1.7) lib/active_support/core_ext/object/try.rb:17:in `public_send'
+activesupport (5.1.7) lib/active_support/core_ext/object/try.rb:17:in `try!'
+activesupport (5.1.7) lib/active_support/core_ext/object/try.rb:6:in `try'
+activeadmin (2.4.0) lib/active_admin/callbacks.rb:79:in `block (2 levels) in define_active_admin_callbacks'
+activeadmin (2.4.0) lib/active_admin/resource_controller/data_access.rb:143:in `create_resource'
+inherited_resources (1.11.0) lib/inherited_resources/actions.rb:33:in `create'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.7) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+request_store (1.5.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/admin/donations" for ::1 at 2020-04-23 23:44:41 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::DonationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kIg+lnV7MBjBkVzTG33/K0E0cXxKpvn5Th9saYDISRlnfnroUTtv6/sunWtGZSlDgyppFcQYNKFly7EyoQWX4A==", "donation"=>{"name"=>"ananymous", "email"=>"donation@example.com", "description"=>"5 boxes of granola bars\r\nmedium boys sweatshirt\r\n2 boxes of pencils"}, "commit"=>"Create Donation"}
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "donations" ("name", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "ananymous"], ["email", "donation@example.com"], ["description", "5 boxes of granola bars\r\nmedium boys sweatshirt\r\n2 boxes of pencils"], ["created_at", "2020-04-24 04:44:41.620204"], ["updated_at", "2020-04-24 04:44:41.620204"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/donations/1
+Completed 302 Found in 62ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/admin/donations/1" for ::1 at 2020-04-23 23:44:41 -0500
+Processing by Admin::DonationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDonation Load (0.2ms)[0m  [1m[34mSELECT  "donations".* FROM "donations" WHERE "donations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/show.html.arb
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Donation"], ["resource_id", 1], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Donation"], ["resource_id", 1], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/show.html.arb (895.4ms)
+Completed 200 OK in 907ms (Views: 896.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/admin/items" for ::1 at 2020-04-23 23:44:45 -0500
+Processing by Admin::ItemsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (260.6ms)
+Completed 200 OK in 275ms (Views: 260.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/admin/needs" for ::1 at 2020-04-23 23:44:46 -0500
+Processing by Admin::NeedsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "needs" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (149.7ms)
+Completed 200 OK in 159ms (Views: 151.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/needs/new" for ::1 at 2020-04-23 23:44:48 -0500
+Processing by Admin::NeedsController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/new.html.arb
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/new.html.arb (133.4ms)
+Completed 200 OK in 147ms (Views: 139.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/needs" for ::1 at 2020-04-23 23:45:47 -0500
+Processing by Admin::NeedsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "needs" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (215.2ms)
+Completed 200 OK in 221ms (Views: 217.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/categories" for ::1 at 2020-04-23 23:45:57 -0500
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (142.5ms)
+Completed 200 OK in 148ms (Views: 144.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/dashboard" for ::1 at 2020-04-23 23:46:00 -0500
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb (82.6ms)
+Completed 200 OK in 86ms (Views: 84.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/categories" for ::1 at 2020-04-23 23:46:04 -0500
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (192.1ms)
+Completed 200 OK in 200ms (Views: 195.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/donations" for ::1 at 2020-04-23 23:47:15 -0500
+Processing by Admin::DonationsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "donations" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "donations" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "donations"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "donations" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mDonation Load (0.3ms)[0m  [1m[34mSELECT  "donations".* FROM "donations" ORDER BY "donations"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (159.3ms)
+Completed 200 OK in 164ms (Views: 161.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/items" for ::1 at 2020-04-23 23:47:36 -0500
+Processing by Admin::ItemsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (187.5ms)
+Completed 200 OK in 193ms (Views: 188.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/items/1/edit" for ::1 at 2020-04-23 23:47:58 -0500
+Processing by Admin::ItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/edit.html.arb (151.9ms)
+Completed 200 OK in 159ms (Views: 155.5ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/admin/items/1" for ::1 at 2020-04-23 23:48:02 -0500
+Processing by Admin::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bMY9t2GKVC2UVSiCJ66HJ5V02Ms6Kgp3rjxFktHo+sGbMHnJRcoL3q7q6Tp6tlFPV2rAorSUxy+F6JjJ8CUkOA==", "item"=>{"category_id"=>"1", "name"=>"Cliff Bar", "quantity"=>"4", "size"=>"N/A"}, "commit"=>"Update Item", "id"=>"1"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "items" SET "quantity" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["quantity", 4], ["updated_at", "2020-04-24 04:48:02.915147"], ["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/items/1
+Completed 302 Found in 14ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/admin/items/1" for ::1 at 2020-04-23 23:48:02 -0500
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/show.html.arb
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Item"], ["resource_id", 1], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Item"], ["resource_id", 1], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/show.html.arb (188.2ms)
+Completed 200 OK in 192ms (Views: 189.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/items" for ::1 at 2020-04-23 23:48:08 -0500
+Processing by Admin::ItemsController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (155.1ms)
+Completed 200 OK in 160ms (Views: 156.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/items/new" for ::1 at 2020-04-23 23:48:39 -0500
+Processing by Admin::ItemsController#new as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/new.html.arb
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/new.html.arb (188.7ms)
+Completed 200 OK in 193ms (Views: 190.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/items/new" for ::1 at 2020-04-23 23:50:12 -0500
+Processing by Admin::ItemsController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/new.html.arb
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/new.html.arb (157.2ms)
+Completed 200 OK in 162ms (Views: 159.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/items" for ::1 at 2020-04-23 23:50:26 -0500
+Processing by Admin::ItemsController#index as HTML
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (179.1ms)
+Completed 200 OK in 186ms (Views: 180.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/logout" for ::1 at 2020-04-23 23:51:25 -0500
+Processing by ActiveAdmin::Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UOvtRAIYkX185iGHbf8Dys46jD2xV/cQ5HSAvhgohIOnHak6JljOjkZZ4D8w59WiDCSUVD/pOkjPoF3lOeVaeg=="}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 38ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for ::1 at 2020-04-23 23:51:25 -0500
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for ::1 at 2020-04-23 23:51:25 -0500
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/shared/_links.erb (2.3ms)
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (38.0ms)
+Completed 200 OK in 160ms (Views: 155.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2020-04-23 23:52:03 -0500
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cA4DXXtosxH4RtSyzmBq09cj2uH1mA0oOEwxGIWlLCBCDvVPMFkpH3ngLUDsT72CETTB3piu8n2mosABHawC3A==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 227ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for ::1 at 2020-04-23 23:52:04 -0500
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb (203.7ms)
+Completed 200 OK in 210ms (Views: 206.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/categories" for ::1 at 2020-04-23 23:52:13 -0500
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (243.0ms)
+Completed 200 OK in 251ms (Views: 244.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/donations" for ::1 at 2020-04-23 23:52:39 -0500
+Processing by Admin::DonationsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "donations" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "donations" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "donations"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "donations" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mDonation Load (0.6ms)[0m  [1m[34mSELECT  "donations".* FROM "donations" ORDER BY "donations"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (247.2ms)
+Completed 200 OK in 254ms (Views: 249.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/items" for ::1 at 2020-04-23 23:52:43 -0500
+Processing by Admin::ItemsController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (371.6ms)
+Completed 200 OK in 378ms (Views: 371.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/admin/items/1/edit" for ::1 at 2020-04-23 23:52:58 -0500
+Processing by Admin::ItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Item Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/edit.html.arb (249.4ms)
+Completed 200 OK in 257ms (Views: 250.5ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/admin/items/1" for ::1 at 2020-04-23 23:53:05 -0500
+Processing by Admin::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R1Bgs/483oB8H+f3NNJE/ZLeB70K68yM0nr+bw4JszldmMTC7WgibJyK+vVIA3488bHKk89F3PdVBRU2E4ZzQw==", "item"=>{"category_id"=>"1", "name"=>"Cliff Bar", "quantity"=>"2", "size"=>"N/A"}, "commit"=>"Update Item", "id"=>"1"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "items" SET "quantity" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["quantity", 2], ["updated_at", "2020-04-24 04:53:05.142525"], ["id", 1]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/items/1
+Completed 302 Found in 18ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/items/1" for ::1 at 2020-04-23 23:53:05 -0500
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/show.html.arb
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Item"], ["resource_id", 1], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Item"], ["resource_id", 1], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/show.html.arb (222.7ms)
+Completed 200 OK in 229ms (Views: 224.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/items" for ::1 at 2020-04-23 23:53:10 -0500
+Processing by Admin::ItemsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (162.8ms)
+Completed 200 OK in 168ms (Views: 163.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/items/new" for ::1 at 2020-04-23 23:53:13 -0500
+Processing by Admin::ItemsController#new as HTML
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/new.html.arb
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/new.html.arb (193.9ms)
+Completed 200 OK in 201ms (Views: 198.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/items" for ::1 at 2020-04-23 23:53:34 -0500
+Processing by Admin::ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z7lPWSwSsPzKZUPnU9X4aaEBcDHhIGYBqipOdIgliQN9cesoP0ZMECrwXuUvBMKowm69HySOdnotVaUtlapJeQ==", "item"=>{"category_id"=>"2", "name"=>"pencil", "quantity"=>"5", "size"=>"N/A"}, "commit"=>"Create Item"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "quantity", "size", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "pencil"], ["quantity", 5], ["size", "N/A"], ["category_id", 2], ["created_at", "2020-04-24 04:53:34.451970"], ["updated_at", "2020-04-24 04:53:34.451970"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/items/2
+Completed 302 Found in 16ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/admin/items/2" for ::1 at 2020-04-23 23:53:34 -0500
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdminUser Load (0.8ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/show.html.arb
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Item"], ["resource_id", 2], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Item"], ["resource_id", 2], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/show.html.arb (208.6ms)
+Completed 200 OK in 220ms (Views: 211.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/items" for ::1 at 2020-04-23 23:53:38 -0500
+Processing by Admin::ItemsController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /Users/boothjb/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (209.6ms)
+Completed 200 OK in 215ms (Views: 210.6ms | ActiveRecord: 2.1ms)
+
+
