@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    @needs = Need.all
   end
 
   def help

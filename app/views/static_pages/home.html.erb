@@ -7,4 +7,20 @@
   <%= link_to "Donate Now", '#', class: "btn btn-lg btn-primary" %>
   <%= link_to "Search Closet", '#', class: "btn btn-lg btn-primary" %>
   <%= link_to "Sign up!", '#', class: "btn btn-lg btn-primary" %>
+
+</div>
+<div class="container">
+  <h2>Current Closet Needs:</h2>
+  <div class="container needs-container">
+    <ul class="list-group col-md-6 center">
+      <% if @needs.any? %>
+      <% for need in @needs %>
+      <li class="list-group-item need"><span class="need-text"><%= need.description %></span></li>
+      <% end %>
+      <% else %>
+      <li class="list-group-item need"><span class="need-text">No Current
+          Needs!</span></li>
+      <% end %>
+    </ul>
+  </div>
 </div>
