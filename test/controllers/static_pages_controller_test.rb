@@ -3,6 +3,7 @@ require 'test_helper'
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   def setup
     @base_title = "Ruby on Rails Tutorial Sample App"
+
   end
 
   test "should get home" do
@@ -11,6 +12,13 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "Home | #{@base_title}"
   end
 
+  test "should show Needs on home page" do
+    # create a test need in the database
+    Need.create(description: "test-need: Water Bottle")
+    get static_pages_home_url
+    assert_select("li","test-need: Water Bottle")
+  end
+  
   test "should get help" do
     get static_pages_help_url
     assert_response :success
