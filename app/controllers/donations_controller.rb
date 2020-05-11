@@ -10,6 +10,7 @@ class DonationsController < ApplicationController
   # GET /donations/1
   # GET /donations/1.json
   def show
+    @donation = Donation.find(params[:id])
   end
 
   # GET /donations/new
@@ -69,6 +70,7 @@ class DonationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def donation_params
-      params.fetch(:donation, {})
+      #params.fetch(:donation, {})
+      params.require(:donation).permit(:name, :email, :description)
     end
 end

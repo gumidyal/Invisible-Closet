@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get  '/contact', to: 'static_pages#contact'
   get  '/donation', to: 'donations#new'
   post '/donation', to: 'donations#create'
+  resources :donations
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
