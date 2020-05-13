@@ -1,5 +1,20 @@
-<h1>New Donation</h1>
+<% provide(:title, 'Donation') %>
+<h1>Donation</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@donation, url: donation_path) do |f| %>
 
-<%= render 'form', donation: @donation %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
 
-<%= link_to 'Back', donations_path %>
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :description %>
+      <%= f.text_field :description, class: 'form-control' %>
+
+
+      <%= f.submit "Submit my donation", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
