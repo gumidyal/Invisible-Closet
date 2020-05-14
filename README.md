@@ -1,7 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Project description
+
+Invisible Closet is established at Grinnell High School, Grinnell Middle School and the Davis Elementary School. The Invisible Closet project is aims to provide free resources for all students at the Grinnell Middle School including food, clothes, toiletries, and other needs of the students. Invisible Closet prioritizes to provide users with accessibility and anonymity.
 
 # Ruby on Rails application source
 
