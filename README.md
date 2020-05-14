@@ -4,6 +4,17 @@
 
 Invisible Closet is established at Grinnell High School, Grinnell Middle School and the Davis Elementary School. The Invisible Closet project is aims to provide free resources for all students at the Grinnell Middle School including food, clothes, toiletries, and other needs of the students. Invisible Closet prioritizes to provide users with accessibility and anonymity.
 
+# TO-DO list:
+
+- Implement search page so that students can search for items
+- Link Google request form with the website database and urls
+- Add a representative picture of the project to the homepage of the website
+- Adjust the donation form to two-column formatting (wish list on the left and form on the right)
+- Support download and import of .csv files which record the previous inventory of the closet
+- Gnerate automatic thank-you emails to donors after they fill out the donation forms
+- Add links to the Grinnell Middle School website and education department website
+- Ultimately develop inter-closet inventory systems
+
 # Ruby on Rails application source
 
 This is an application developed based on 
