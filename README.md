@@ -11,7 +11,7 @@ Invisible Closet is established at Grinnell High School, Grinnell Middle School 
 - Add a representative picture of the project to the homepage of the website
 - Adjust the donation form to two-column formatting (wish list on the left and form on the right)
 - Support download and import of .csv files which record the previous inventory of the closet
-- Gnerate automatic thank-you emails to donors after they fill out the donation forms
+- Generate automatic thank-you emails to donors after they fill out the donation forms
 - Add links to the Grinnell Middle School website and education department website
 - Implement more test cases for the database and front-end urls
 - Ultimately develop inter-closet inventory systems
