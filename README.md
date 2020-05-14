@@ -16,6 +16,10 @@ Invisible Closet is established at Grinnell High School, Grinnell Middle School 
 - Implement more test cases for the database and front-end urls
 - Ultimately develop inter-closet inventory systems
 
+# Final Progress Report
+
+https://docs.google.com/document/d/1IdREyniXDEmAZeWWu3iLascXSVHoJ5GIoNAnE6d60-E/edit?usp=sharing
+
 # Ruby on Rails application source
 
 This is an application developed based on 
